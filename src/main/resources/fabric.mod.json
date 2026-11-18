@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "nebulavisuals",
+  "version": "0.4 alpha",
+  "name": "NebulaVisuals",
+  "description": "Визуальный мод на Minecraft, сделанный создателями сервера NebulaPVP",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/nebulavisuals/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": [
+      "org.itzmr.nebulavisuals.client.NebulavisualsDataGenerator"
+    ],
+    "client": [
+      "org.itzmr.nebulavisuals.client.NebulavisualsClient"
+    ],
+    "main": [
+      "org.itzmr.nebulavisuals.Nebulavisuals"
+    ]
+  },
+  "mixins": [
+    "nebulavisuals.mixins.json",
+    {
+      "config": "nebulavisuals.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.18.0",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
